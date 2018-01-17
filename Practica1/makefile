@@ -2,16 +2,16 @@
 BIN = bin
 SRC = src
 
-all: $(BIN)/suma32bits $(BIN)/suma64bits $(BIN)/suma64bitsSigno $(BIN)/media64bits
+all: $(BIN)/suma32bits $(BIN)/suma64uns $(BIN)/suma64sgn $(BIN)/media
 
 $(BIN)/suma32bits: $(SRC)/suma32bits.s
 	gcc -m32 $(SRC)/suma32bits.s -o $(BIN)/suma32bits
 
-$(BIN)/suma64bits: $(SRC)/suma64bits.s
-	gcc -m32 suma64bits.s -o $(BIN)/suma64bits
+$(BIN)/suma64uns: $(SRC)/suma64uns.s
+	gcc -m32 $(SRC)/suma64uns.s -o $(BIN)/suma64uns
 
-$(BIN)/suma64bitsSigno: $(SRC)/suma64bitsSigno.s
-	gcc -m32 $(SRC)/suma64bitsSigno.s -o $(BIN)/suma64bitsSigno
+$(BIN)/suma64sgn: $(SRC)/suma64sgn.s
+	gcc -m32 $(SRC)/suma64sgn.s -o $(BIN)/suma64sgn
 
-$(BIN)/media64bits: $(SRC)/media64bits.s
-	gcc -m32 $(SRC)/media64bits.s -o $(BIN)/media64bits
+$(BIN)/media: $(SRC)/media.s
+	gcc -m32 $(SRC)/media.s -o $(BIN)/media
