@@ -16,7 +16,7 @@ REP = $(EXE:=.rep)
 
 ###############################################################################
 
-CXXFLAGS = -march=native -Ofast -std=c++11 -Wall
+CXXFLAGS = -march=native -O1 -std=c++11 -Wall
 PLT =  "set terminal svg enhanced; \
 		set output '$@'; \
 		set nokey; \
